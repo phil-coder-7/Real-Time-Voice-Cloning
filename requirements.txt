@@ -1,4 +1,3 @@
-  
 # each portion of tensorflow is needed
 # core package is for RNN, cpu and gpu are for specific system speed-ups
 tensorflow==1.14.0
