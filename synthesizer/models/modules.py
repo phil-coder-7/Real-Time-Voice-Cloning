@@ -265,7 +265,7 @@ class Prenet:
         with tf.compat.v1.variable_scope(self.scope):
             for i, size in enumerate(self.layers_sizes):
                 dense = tf.compat.v1.layers.dense(x, units=size, activation=self.activation,
-                                        name="dense_{}".format(i + 1))
+                                        name=keras.layers.dense_{}".format(i + 1))
                 # The paper discussed introducing diversity in generation at inference time
                 # by using a dropout of 0.5 only in prenet layers (in both training and inference).
                 x = tf.compat.v1.layers.dropout(dense, rate=self.drop_rate, training=True,
